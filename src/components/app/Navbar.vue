@@ -28,9 +28,9 @@
                   </li>
                   <li class="divider" tabindex="-1"></li>
                   <li>
-                     <a href="#" class="black-text" @click.prevent="logout">
+                     <router-link to="/login" class="black-text" @click.prevent="logout">
                         <i class="material-icons">assignment_return</i>Выйти
-                     </a>
+                     </router-link>
                   </li>
                </ul>
 
@@ -52,8 +52,12 @@ export default {
    },
    
    methods: {
-      logout(){
-         this.$router.push('/login?message=logout')
+      async logout(){
+         try{
+            await this.$store.dispatch('logout')
+         } catch(e){
+            this.$router.push('/login?message=logout')
+         }
       },
       
    },

@@ -1,5 +1,7 @@
 # tasks
 
+Test vue project
+
 ## Project setup
 ```
 npm install
