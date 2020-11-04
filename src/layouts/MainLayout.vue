@@ -3,7 +3,7 @@
       
       <Navbar @click="isOpen = !isOpen" />
 
-      <Sidebar v-model="isOpen" /> 
+      <Sidebar v-bind:isOpen="isOpen" /> 
       
 
       <main class="app-content" :class="{full: !isOpen}">
@@ -13,9 +13,9 @@
       </main>
 
       <div class="fixed-action-btn">
-      <a class="btn-floating btn-large blue" href="#">
-         <i class="large material-icons">add</i>
-      </a>
+         <router-link class="btn-floating btn-large blue" to="/record">
+            <i class="large material-icons">add</i>
+         </router-link>
       </div>
    </div>
 </template>

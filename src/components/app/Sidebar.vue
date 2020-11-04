@@ -1,12 +1,12 @@
 <template>
-   <ul class="sidenav app-sidenav" v-bind:class="{open: value}">
+   <ul class="sidenav app-sidenav" v-bind:class="{open: isOpen}">
       <router-link
          v-for="link in links"
-         v-bind:key="link.url"
          tag="li"
          active-class="active"
-         v-bind:to="link.url"
-         v-bind:exact="link.exact"
+         :key="link.url"
+         :to="link.url"
+         :exact="link.exact"
       >
          <a href="#" class="waves-effect waves-orange pointer">{{link.title}}</a>
       </router-link>
@@ -15,7 +15,7 @@
 
 <script>
 export default {
-   props: ['value'],
+   props: ['isOpen'],
    data: () => ({
       links: [
          {title: 'Счет', url: '/', exact: true},
