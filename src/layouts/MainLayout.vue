@@ -30,6 +30,12 @@ export default {
    data: () => ({
       isOpen: true
    }),
+   async mounted() {
+      //получаем инфу о залогиненном пользователе
+      if(!Object.keys(this.$store.getters.info).length){
+         await this.$store.dispatch('fetchInfo')
+      }
+   },
    components: {
       Navbar, Sidebar
    }
