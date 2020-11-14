@@ -12,7 +12,7 @@
             <label for="email">Email</label>
             <small class="helper-text invalid"
                v-if="$v.email.$dirty && !$v.email.required"
-               >
+            >
                   Поле почты не должно быть пустым
             </small>
             <small class="helper-text invalid"
