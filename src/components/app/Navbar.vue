@@ -28,9 +28,12 @@
                   </li>
                   <li class="divider" tabindex="-1"></li>
                   <li>
-                     <router-link to="/login" class="black-text" @click.prevent="logout">
+                     <!-- <router-link to="/login" class="black-text" @click.prevent="logout">
                         <i class="material-icons">assignment_return</i>Выйти
-                     </router-link>
+                     </router-link> -->
+                     <span class="black-text" @click.prevent="logout">
+                        <i class="material-icons">assignment_return</i>Выйти
+                     </span>
                   </li>
                </ul>
 
