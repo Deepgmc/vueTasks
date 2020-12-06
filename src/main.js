@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Vuelidate from 'vuelidate'
+import Paginate from 'vuejs-paginate'
 
 import App from './App.vue'
 import './registerServiceWorker'
@@ -29,6 +30,7 @@ Vue.filter('currency', currencyFilter)
 Vue.directive('tooltip', tooltipDirective)
 
 Vue.component('Loader', Loader)
+Vue.component('Paginate', Paginate)
 
 var firebaseConfig = {
    apiKey           : "AIzaSyDR_8476lCW_NZljc8lyGi6dTio2v51j_Y",
